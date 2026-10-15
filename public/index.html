@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>c-httpd</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <h1>It works.</h1>
+    <p>This page is served by <strong>c-httpd</strong>, an HTTP/1.1 server written in pure C.</p>
+
+    <h2>Try the built-in API</h2>
+    <ul>
+      <li><a href="/api/health">/api/health</a> &mdash; liveness check</li>
+      <li><a href="/api/stats">/api/stats</a> &mdash; request and connection counters</li>
+      <li><a href="/api/echo?hello=world">/api/echo</a> &mdash; reflects your request back as JSON</li>
+      <li><a href="/files/">/files/</a> &mdash; a directory listing</li>
+    </ul>
+
+    <h2>Live stats</h2>
+    <pre id="stats">loading&hellip;</pre>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

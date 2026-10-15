@@ -1,0 +1,37 @@
+{
+  "clangd.path": "C:/msys64/clang64/bin/clangd.exe",
+  "clangd.arguments": [
+    "--query-driver=C:/msys64/clang64/bin/clang*",
+    "--background-index",
+    "--clang-tidy",
+    "--header-insertion=never",
+    "--completion-style=detailed",
+    "--function-arg-placeholders=true"
+  ],
+
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "C_Cpp.autocomplete": "disabled",
+  "C_Cpp.errorSquiggles": "disabled",
+
+  "files.associations": {
+    "*.h": "c",
+    "*.c": "c"
+  },
+
+  "[c]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+    "editor.formatOnSave": true
+  },
+
+  "terminal.integrated.profiles.windows": {
+    "MSYS2 CLANG64": {
+      "path": "C:/msys64/usr/bin/bash.exe",
+      "args": ["--login", "-i"],
+      "env": {
+        "MSYSTEM": "CLANG64",
+        "CHERE_INVOKING": "1"
+      }
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "MSYS2 CLANG64"
+}

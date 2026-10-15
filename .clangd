@@ -1,0 +1,27 @@
+# clangd configuration for pure C with MSYS2 CLANG64
+CompileFlags:
+  Compiler: C:/msys64/clang64/bin/clang.exe
+  Add:
+    - -xc                              # treat every file (including .h) as C, not C++
+    - -std=c23
+    - --target=x86_64-w64-windows-gnu
+    - -IC:/msys64/clang64/include
+    - -Isrc                            # project headers in src/
+    - -Wall
+    - -Wextra
+    - -Wpedantic
+    - -pthread
+  Remove:
+    - -std=c++*
+
+Diagnostics:
+  UnusedIncludes: Strict
+  MissingIncludes: Strict
+
+Index:
+  Background: Build
+
+InlayHints:
+  Enabled: true
+  ParameterNames: true
+  DeducedTypes: true
